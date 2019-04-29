@@ -1,0 +1,46 @@
+Nmap Commands
+==============
+
+Quick Scan
+----------
+
+nmap <IP Address> --top 10 -open
+
+Full Scan
+----------
+
+nmap -A <IP Address> - Very long and intensive
+nmap <IP Address> -p- -sV --reason
+
+Other Useful Nmap scans
+-----------------------
+
+UDP -                       nmap -sU -p 123,161,162 <IP Address>
+TCP Connect -               nmap -sT <IP Address>
+OS & Services -             nmap -A <IP Address>
+Save in Grep Format -       nmap -oG outputfile.txt <IP Address>
+Script Scanning -           nmap -sV -p 443 –script=ssl-heartbleed.nse <IP Address>
+Scan with set of scripts -  nmap -sV --script=smb* 192.168.1.1
+
+Other Useful tools
+
+enum4linux -a <IP address>
+smbclient -L\\Hostname/c -I <IP Address>
+
+Web Dir
+-------
+
+dirb
+dirbuster
+gobuster
+nikto
+cadaver
+
+
+NC
+---
+
+
+nc -lvp 4444 - Set up a listening port on your own system ( to accept shells /connections back)
+
+nc -nv <IP> <port> - connect to services/ bind shell etc.
