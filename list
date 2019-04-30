@@ -13,7 +13,7 @@ nmap -A <IP Address> - Very long and intensive
 nmap <IP Address> -p- -sV --reason
 
 Other Useful Nmap scans
------------------------
+======================
 
 UDP -                       nmap -sU -p 123,161,162 <IP Address>
 TCP Connect -               nmap -sT <IP Address>
